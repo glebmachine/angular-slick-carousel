@@ -285,10 +285,6 @@ angular
             init();
           };
 
-          element.one('$destroy', function () {
-            destroy();
-          });
-
           return scope.$watch('settings', function (newVal, oldVal) {
             if (newVal !== null) {
               return destroyAndInit();
